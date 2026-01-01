@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ProCode">
+
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/606/606203.png">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/606/606203.png">
+
+    <title>ProCode Advanced Editor</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('html')">HTML</button>
+        <button class="tab-btn" onclick="openTab('css')">CSS</button>
+        <button class="tab-btn" onclick="openTab('js')">JS</button>
+        <button class="tab-btn preview-btn" onclick="openTab('preview'); runCode();">PREVIEW</button>
+        <button class="tab-btn" style="background:orange; color:black;" onclick="downloadProject()">DOWNLOAD</button>
+        </div>
+
+    <div class="container">
+        <div id="html" class="tab-content active">
+            <textarea id="html-code" placeholder="Write HTML..."></textarea>
+        </div>
+        <div id="css" class="tab-content">
+            <textarea id="css-code" placeholder="Write CSS..."></textarea>
+        </div>
+        <div id="js" class="tab-content">
+            <textarea id="js-code" placeholder="Write JS..."></textarea>
+        </div>
+
+        <div id="preview" class="tab-content">
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
