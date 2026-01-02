@@ -18,6 +18,7 @@ jobs:
       - name: Create Web Project
         run: |
           mkdir -p www
+          # Base64 decode use kar rahe hain taaki syntax error na aaye
           echo "${{ github.event.client_payload.html_code }}" | base64 --decode > www/index.html
 
       - name: Build with Capacitor
